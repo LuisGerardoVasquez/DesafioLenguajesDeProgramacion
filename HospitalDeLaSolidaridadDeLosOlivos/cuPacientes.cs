@@ -50,23 +50,40 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
         }
         private void btnPacientes_Guardar_Click(object sender, EventArgs e)
         {
-            Paciente p = new Paciente(txtPaciente_Nombre.Text, txtPaciente_DNI.Text, txtPaciente_Telefono.Text);
-            pacientes.Add(p);
-            ActualizarTabla();
+            try
+            {
+                Paciente p = new Paciente(txtPaciente_Nombre.Text, txtPaciente_DNI.Text, txtPaciente_Telefono.Text);
+
+                pacientes.Add(p);
+                ActualizarTabla();
+
+                txtPaciente_Nombre.Clear();
+                txtPaciente_DNI.Clear();
+                txtPaciente_Telefono.Clear();
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Dato inválido",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnPacientes_Eliminar_Click(object sender, EventArgs e)
         {
-            string Dni = dgvPacientes.SelectedRows[0].Cells[1].Value.ToString();
-            foreach (Paciente p in pacientes)
+            try
             {
-                if (p.Dni == Dni)
-                {
-                    pacientes.Remove(p);
-                    break;
-                }
+                string Dni = dgvPacientes.SelectedRows[0].Cells[1].Value.ToString();
+                pacientes.RemoveAll(p => p.Dni == Dni);
+                ActualizarTabla();
             }
-            ActualizarTabla();
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show(
+                    "Seleccione un paciente de la tabla.",
+                    "Selección inválida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
         }
     }
 }
