@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HospitalDeLaSolidaridadDeLosOlivos
+{
+    public class Paciente : Persona
+    {
+        public Paciente(string nombre, string dni, string telefono) : base(nombre, dni, telefono)
+        {
+        }
+    }
+}
