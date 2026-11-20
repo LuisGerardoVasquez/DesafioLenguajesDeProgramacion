@@ -38,6 +38,10 @@
             this.btnPacientes_Guardar = new System.Windows.Forms.Button();
             this.btnPacientes_Eliminar = new System.Windows.Forms.Button();
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
+            this.dtpPaciente_Nacimiento = new System.Windows.Forms.DateTimePicker();
+            this.cmbPaciente_Sangre = new System.Windows.Forms.ComboBox();
+            this.lblSangre = new System.Windows.Forms.Label();
+            this.lblFechaDeNacimiento = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +115,7 @@
             // btnPacientes_Guardar
             // 
             this.btnPacientes_Guardar.Font = new System.Drawing.Font("Arial", 10F);
-            this.btnPacientes_Guardar.Location = new System.Drawing.Point(66, 191);
+            this.btnPacientes_Guardar.Location = new System.Drawing.Point(66, 233);
             this.btnPacientes_Guardar.Name = "btnPacientes_Guardar";
             this.btnPacientes_Guardar.Size = new System.Drawing.Size(110, 40);
             this.btnPacientes_Guardar.TabIndex = 2;
@@ -122,7 +126,7 @@
             // btnPacientes_Eliminar
             // 
             this.btnPacientes_Eliminar.Font = new System.Drawing.Font("Arial", 10F);
-            this.btnPacientes_Eliminar.Location = new System.Drawing.Point(186, 191);
+            this.btnPacientes_Eliminar.Location = new System.Drawing.Point(186, 233);
             this.btnPacientes_Eliminar.Name = "btnPacientes_Eliminar";
             this.btnPacientes_Eliminar.Size = new System.Drawing.Size(110, 40);
             this.btnPacientes_Eliminar.TabIndex = 2;
@@ -136,25 +140,66 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPacientes.Location = new System.Drawing.Point(66, 246);
+            this.dgvPacientes.Location = new System.Drawing.Point(66, 283);
             this.dgvPacientes.Name = "dgvPacientes";
             this.dgvPacientes.RowHeadersWidth = 51;
             this.dgvPacientes.RowTemplate.Height = 24;
-            this.dgvPacientes.Size = new System.Drawing.Size(600, 274);
+            this.dgvPacientes.Size = new System.Drawing.Size(600, 241);
             this.dgvPacientes.TabIndex = 3;
+            // 
+            // dtpPaciente_Nacimiento
+            // 
+            this.dtpPaciente_Nacimiento.CalendarFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpPaciente_Nacimiento.Location = new System.Drawing.Point(396, 99);
+            this.dtpPaciente_Nacimiento.Name = "dtpPaciente_Nacimiento";
+            this.dtpPaciente_Nacimiento.Size = new System.Drawing.Size(270, 22);
+            this.dtpPaciente_Nacimiento.TabIndex = 4;
+            // 
+            // cmbPaciente_Sangre
+            // 
+            this.cmbPaciente_Sangre.Font = new System.Drawing.Font("Arial", 10F);
+            this.cmbPaciente_Sangre.FormattingEnabled = true;
+            this.cmbPaciente_Sangre.Location = new System.Drawing.Point(165, 190);
+            this.cmbPaciente_Sangre.Name = "cmbPaciente_Sangre";
+            this.cmbPaciente_Sangre.Size = new System.Drawing.Size(172, 27);
+            this.cmbPaciente_Sangre.TabIndex = 5;
+            // 
+            // lblSangre
+            // 
+            this.lblSangre.Font = new System.Drawing.Font("Arial", 10F);
+            this.lblSangre.Location = new System.Drawing.Point(67, 190);
+            this.lblSangre.Name = "lblSangre";
+            this.lblSangre.Size = new System.Drawing.Size(110, 30);
+            this.lblSangre.TabIndex = 0;
+            this.lblSangre.Text = "Sangre";
+            this.lblSangre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblFechaDeNacimiento
+            // 
+            this.lblFechaDeNacimiento.Font = new System.Drawing.Font("Arial", 10F);
+            this.lblFechaDeNacimiento.Location = new System.Drawing.Point(392, 66);
+            this.lblFechaDeNacimiento.Name = "lblFechaDeNacimiento";
+            this.lblFechaDeNacimiento.Size = new System.Drawing.Size(274, 30);
+            this.lblFechaDeNacimiento.TabIndex = 0;
+            this.lblFechaDeNacimiento.Text = "Fecha de Nacimiento";
+            this.lblFechaDeNacimiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cuPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cmbPaciente_Sangre);
+            this.Controls.Add(this.dtpPaciente_Nacimiento);
             this.Controls.Add(this.dgvPacientes);
             this.Controls.Add(this.btnPacientes_Eliminar);
             this.Controls.Add(this.btnPacientes_Guardar);
             this.Controls.Add(this.txtPaciente_Telefono);
             this.Controls.Add(this.txtPaciente_DNI);
             this.Controls.Add(this.txtPaciente_Nombre);
+            this.Controls.Add(this.lblSangre);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblDNI);
+            this.Controls.Add(this.lblFechaDeNacimiento);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblTituloPacientes);
             this.Name = "cuPacientes";
@@ -177,5 +222,9 @@
         private System.Windows.Forms.Button btnPacientes_Guardar;
         private System.Windows.Forms.Button btnPacientes_Eliminar;
         private System.Windows.Forms.DataGridView dgvPacientes;
+        private System.Windows.Forms.DateTimePicker dtpPaciente_Nacimiento;
+        private System.Windows.Forms.ComboBox cmbPaciente_Sangre;
+        private System.Windows.Forms.Label lblSangre;
+        private System.Windows.Forms.Label lblFechaDeNacimiento;
     }
 }

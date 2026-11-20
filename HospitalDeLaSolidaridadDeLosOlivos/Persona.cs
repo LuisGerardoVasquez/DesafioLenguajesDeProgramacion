@@ -10,32 +10,50 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
 {
     public abstract class Persona
     {
-        private string nombre;
-        private string dni;
-        private string telefono;
-        protected Persona(string nombre, string dni, string telefono)
+        // ATRIBUTOS
+        protected string idPersona;
+        protected string nombreCompleto;
+        protected string dniProtegido;
+        protected string telefono;
+        
+        // CONSTRUCTOR
+        protected Persona(string id, string nombre, string dni, string telefono)
         {
+            IdPersona = id;
             Nombre = nombre;
             Dni = dni;
             Telefono = telefono;
         }
 
+        // PROPIEDADES
+        public string IdPersona
+        {
+            get { return idPersona; }
+            private set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException("El id es obligatorio.");
+                }
+                idPersona = value.Trim();
+            }
+        }
         public string Nombre
         {
-            get { return nombre; }
+            get { return nombreCompleto; }
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("El nombre es obligatorio.");
                 }
-                nombre = value.Trim();
+                nombreCompleto = value.Trim();
             }
         }
 
         public string Dni
         {
-            get { return dni; }
+            get { return dniProtegido; }
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
@@ -50,7 +68,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
                     throw new ArgumentException("El DNI debe tener 8 dígitos numéricos.");
                 }
 
-                dni = limpio;
+                dniProtegido = limpio;
             }
         }
 
@@ -73,6 +91,20 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
 
                 telefono = limpio;
             }
+        }
+
+        // METODOS
+        public string ObtenerIdentificadorSeguro()
+        {
+            return "*****" + dniProtegido.Substring(5);   // ej. *****346
+        }
+
+        public virtual bool ValidarDatos()
+        {
+            return !string.IsNullOrWhiteSpace(idPersona)
+                && !string.IsNullOrWhiteSpace(nombreCompleto)
+                && !string.IsNullOrWhiteSpace(dniProtegido)
+                && !string.IsNullOrWhiteSpace(telefono);
         }
     }
 }
