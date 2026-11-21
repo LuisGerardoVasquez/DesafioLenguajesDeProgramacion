@@ -89,7 +89,7 @@
             // 
             this.txtPaciente_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPaciente_Nombre.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtPaciente_Nombre.Location = new System.Drawing.Point(165, 76);
+            this.txtPaciente_Nombre.Location = new System.Drawing.Point(175, 76);
             this.txtPaciente_Nombre.Name = "txtPaciente_Nombre";
             this.txtPaciente_Nombre.Size = new System.Drawing.Size(172, 27);
             this.txtPaciente_Nombre.TabIndex = 1;
@@ -98,7 +98,7 @@
             // 
             this.txtPaciente_DNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPaciente_DNI.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtPaciente_DNI.Location = new System.Drawing.Point(165, 114);
+            this.txtPaciente_DNI.Location = new System.Drawing.Point(175, 114);
             this.txtPaciente_DNI.Name = "txtPaciente_DNI";
             this.txtPaciente_DNI.Size = new System.Drawing.Size(172, 27);
             this.txtPaciente_DNI.TabIndex = 1;
@@ -107,7 +107,7 @@
             // 
             this.txtPaciente_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPaciente_Telefono.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtPaciente_Telefono.Location = new System.Drawing.Point(165, 152);
+            this.txtPaciente_Telefono.Location = new System.Drawing.Point(175, 152);
             this.txtPaciente_Telefono.Name = "txtPaciente_Telefono";
             this.txtPaciente_Telefono.Size = new System.Drawing.Size(172, 27);
             this.txtPaciente_Telefono.TabIndex = 1;
@@ -159,7 +159,7 @@
             // 
             this.cmbPaciente_Sangre.Font = new System.Drawing.Font("Arial", 10F);
             this.cmbPaciente_Sangre.FormattingEnabled = true;
-            this.cmbPaciente_Sangre.Location = new System.Drawing.Point(165, 190);
+            this.cmbPaciente_Sangre.Location = new System.Drawing.Point(175, 190);
             this.cmbPaciente_Sangre.Name = "cmbPaciente_Sangre";
             this.cmbPaciente_Sangre.Size = new System.Drawing.Size(172, 27);
             this.cmbPaciente_Sangre.TabIndex = 5;

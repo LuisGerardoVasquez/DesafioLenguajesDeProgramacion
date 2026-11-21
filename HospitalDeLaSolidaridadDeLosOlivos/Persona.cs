@@ -96,7 +96,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
         // METODOS
         public string ObtenerIdentificadorSeguro()
         {
-            return "*****" + dniProtegido.Substring(5);   // ej. *****346
+            return "*****" + dniProtegido.Substring(5);
         }
 
         public virtual bool ValidarDatos()
@@ -106,5 +106,6 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
                 && !string.IsNullOrWhiteSpace(dniProtegido)
                 && !string.IsNullOrWhiteSpace(telefono);
         }
+        public abstract string ObtenerTipo();
     }
 }

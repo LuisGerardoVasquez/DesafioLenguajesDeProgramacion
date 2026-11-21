@@ -85,6 +85,7 @@
     </Compile>
     <Compile Include="Paciente.cs" />
     <Compile Include="Persona.cs" />
+    <Compile Include="PersonalSalud.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="cuAtencion.resx">

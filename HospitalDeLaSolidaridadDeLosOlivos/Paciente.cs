@@ -35,7 +35,9 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
+                {
                     throw new ArgumentException("El número de historia clínica es obligatorio.");
+                }
                 numeroHistoriaClinica = value.Trim();
             }
         }
@@ -72,7 +74,9 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
         public void AgregarAtencion(AtencionMedica atencion)
         {
             if (atencion == null)
+            {
                 throw new ArgumentException("La atención no puede ser nula.");
+            }
             atenciones.Add(atencion);
         }
 
@@ -84,7 +88,9 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
         public void RegistrarDatos()
         {
             if (!ValidarDatos())
+            {
                 throw new ArgumentException("Faltan datos obligatorios del paciente.");
+            }
         }
 
         public override bool ValidarDatos()
@@ -92,6 +98,11 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
             return base.ValidarDatos()
                 && !string.IsNullOrWhiteSpace(numeroHistoriaClinica)
                 && !string.IsNullOrWhiteSpace(tipoSangre);
+        }
+
+        public override string ObtenerTipo()
+        {
+            return "Paciente";
         }
     }
 }

@@ -31,7 +31,6 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
         {
             InitializeComponent();
             //Configuración inicial de la tabla
-            ActualizarTabla();
             dgvPacientes.AllowUserToResizeRows = false;
             dgvPacientes.AllowUserToAddRows = false;
             dgvPacientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -39,6 +38,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
             dgvPacientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPacientes.MultiSelect = false;
             dgvPacientes.ReadOnly = true;
+            ActualizarTabla();
             //Comfiguración inicial del ComboBox del tipo de sangre
             cmbPaciente_Sangre.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPaciente_Sangre.Items.AddRange(Paciente.TiposSangreValidos);
@@ -60,7 +60,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
             dgvPacientes.Columns.Add("nacimiento", "Nacimiento");
             dgvPacientes.Columns.Add("sangre", "Sangre");
 
-            foreach (Paciente p in pacientes.OrderBy(x => x.Nombre))
+            foreach (Paciente p in pacientes)
             {
                 dgvPacientes.Rows.Add(
                     p.IdPersona, p.NumeroHistoriaClinica, p.Nombre,
@@ -72,7 +72,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
         {
             try
             {
-                int n = pacientes.Count + 1;
+                int n = pacientes.Count == 0 ? 1 : pacientes.Max(x => int.Parse(x.IdPersona.Substring(3))) + 1;
 
                 Paciente p = new Paciente(
                     $"PC-{n:0000}",
@@ -83,6 +83,10 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
                     dtpPaciente_Nacimiento.Value,
                     cmbPaciente_Sangre.Text);
 
+                if (pacientes.Any(x => x.Dni == p.Dni))
+                {
+                    throw new ArgumentException("Ya existe un paciente con ese DNI.");
+                }
                 pacientes.Add(p);
                 ActualizarTabla();
 
