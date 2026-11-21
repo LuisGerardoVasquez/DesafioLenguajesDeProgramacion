@@ -12,20 +12,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
 {
     public partial class cuPacientes : UserControl
     {
-        List<Paciente> pacientes = new List<Paciente>
-        {
-            // Datos iniciales
-            new Paciente("PC-0001", "Ana Torres", "71131346", "910248156", "HC-0001", new DateTime(1990, 5, 14), "O+"),
-            new Paciente("PC-0002", "Luis Rojas", "23696822", "992141574", "HC-0002", new DateTime(1985, 11, 2), "B+"),
-            new Paciente("PC-0003", "María Quispe", "82717431", "933437900", "HC-0003", new DateTime(2001, 3, 27), "A-"),
-            new Paciente("PC-0004", "Carlos Mendoza", "45812093", "987654321", "HC-0004", new DateTime(1978, 8, 9), "AB+"),
-            new Paciente("PC-0005", "Rosa Huamán", "60237415", "945128376", "HC-0005", new DateTime(1995, 1, 30), "O-"),
-            new Paciente("PC-0006", "Jorge Salazar", "38291746", "921345678", "HC-0006", new DateTime(1969, 12, 3), "A+"),
-            new Paciente("PC-0007", "Lucía Paredes", "72406158", "958231467", "HC-0007", new DateTime(2003, 6, 18), "B-"),
-            new Paciente("PC-0008", "Miguel Vargas", "19573820", "936782145", "HC-0008", new DateTime(1982, 4, 25), "O+"),
-            new Paciente("PC-0009", "Elena Chávez", "56184973", "914567823", "HC-0009", new DateTime(1990, 9, 11), "AB-"),
-            new Paciente("PC-0010", "Pedro Ramírez", "80329651", "973214685", "HC-0010", new DateTime(1957, 2, 7), "A+")
-        };
+        List<Paciente> pacientes = ConexionBDManager.ObtenerInstancia().Pacientes;
 
         public cuPacientes()
         {

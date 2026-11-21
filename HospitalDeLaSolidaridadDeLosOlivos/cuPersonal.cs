@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,19 +13,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
 {
     public partial class cuPersonal : UserControl
     {
-        List<PersonalSalud> personal = new List<PersonalSalud>
-        {
-            new PersonalSalud("PS-0001", "Dr. Ricardo Medina", "41256873", "987123456", "45821", "Medicina general"),
-            new PersonalSalud("PS-0002", "Dra. Patricia León", "33718492", "956234781", "38210", "Pediatría"),
-            new PersonalSalud("PS-0003", "Lic. Sandra Quiroz", "70521364", "934567218", "62874", "Enfermería"),
-            new PersonalSalud("PS-0004", "Obst. Karen Flores", "48193627", "921876543", "57439", "Obstetricia"),
-            new PersonalSalud("PS-0005", "Ps. Daniel Alva", "62459187", "945671238", "71352", "Psicología"),
-            new PersonalSalud("PS-0006", "Lic. Mariana Soto", "53217894", "968123745", "49083", "Nutrición"),
-            new PersonalSalud("PS-0007", "Lic. Hugo Benavides", "36874215", "912345678", "53167", "Podología"),
-            new PersonalSalud("PS-0008", "Dr. Alberto Cruz", "29846153", "968345127", "29716", "Medicina general"),
-            new PersonalSalud("PS-0009", "Dra. Julia Ortega", "74382951", "977654321", "66240", "Pediatría"),
-            new PersonalSalud("PS-0010", "Lic. Rosa Delgado", "41729638", "935482176", "58904", "Enfermería")
-        };
+        List<PersonalSalud> personal = ConexionBDManager.ObtenerInstancia().Personal;
         public cuPersonal()
         {
             InitializeComponent();
