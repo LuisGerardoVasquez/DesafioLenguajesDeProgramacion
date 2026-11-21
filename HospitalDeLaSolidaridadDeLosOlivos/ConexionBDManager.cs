@@ -16,6 +16,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
         public string RutaBaseDatos { get; set; }
         public List<Paciente> Pacientes { get; private set; }
         public List<PersonalSalud> Personal { get; private set; }
+        public List<Medicamento> Medicamentos { get; private set; }
 
         // CONSTRUCTOR
         private ConexionBDManager()
@@ -50,6 +51,21 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
                 new PersonalSalud("PS-0008", "Alberto Cruz", "29846153", "968345127", "29716", "Medicina general"),
                 new PersonalSalud("PS-0009", "Julia Ortega", "74382951", "977654321", "66240", "Pediatría"),
                 new PersonalSalud("PS-0010", "Rosa Delgado", "41729638", "935482176", "58904", "Enfermería")
+            };
+
+            Medicamentos = new List<Medicamento>
+            {
+                //Datos iniciales
+                new Medicamento("MD-0001", "Paracetamol 500 mg", 120),
+                new Medicamento("MD-0002", "Ibuprofeno 400 mg", 80),
+                new Medicamento("MD-0003", "Amoxicilina 500 mg", 45),
+                new Medicamento("MD-0004", "Loratadina 10 mg", 60),
+                new Medicamento("MD-0005", "Omeprazol 20 mg", 90),
+                new Medicamento("MD-0006", "Metformina 850 mg", 30),
+                new Medicamento("MD-0007", "Losartán 50 mg", 55),
+                new Medicamento("MD-0008", "Salbutamol inhalador", 8),
+                new Medicamento("MD-0009", "Suero oral", 150),
+                new Medicamento("MD-0010", "Diclofenaco 50 mg", 0)
             };
         }
 
