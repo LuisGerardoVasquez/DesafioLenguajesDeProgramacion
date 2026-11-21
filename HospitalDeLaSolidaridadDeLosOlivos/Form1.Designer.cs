@@ -32,10 +32,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPacientes = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnCitas = new System.Windows.Forms.Button();
-            this.btnPersonalDeSalud = new System.Windows.Forms.Button();
-            this.btnMedicamentos = new System.Windows.Forms.Button();
             this.btnAtencion = new System.Windows.Forms.Button();
+            this.btnMedicamentos = new System.Windows.Forms.Button();
+            this.btnPersonalDeSalud = new System.Windows.Forms.Button();
+            this.btnCitas = new System.Windows.Forms.Button();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -94,41 +94,23 @@
             this.panelMenu.Size = new System.Drawing.Size(250, 553);
             this.panelMenu.TabIndex = 3;
             // 
-            // btnCitas
+            // btnAtencion
             // 
-            this.btnCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnCitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCitas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnCitas.FlatAppearance.BorderSize = 0;
-            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCitas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCitas.ForeColor = System.Drawing.Color.White;
-            this.btnCitas.Location = new System.Drawing.Point(0, 70);
-            this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(250, 70);
-            this.btnCitas.TabIndex = 2;
-            this.btnCitas.Text = "   Citas";
-            this.btnCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCitas.UseVisualStyleBackColor = false;
-            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
-            // 
-            // btnPersonalDeSalud
-            // 
-            this.btnPersonalDeSalud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnPersonalDeSalud.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPersonalDeSalud.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnPersonalDeSalud.FlatAppearance.BorderSize = 0;
-            this.btnPersonalDeSalud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonalDeSalud.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonalDeSalud.ForeColor = System.Drawing.Color.White;
-            this.btnPersonalDeSalud.Location = new System.Drawing.Point(0, 140);
-            this.btnPersonalDeSalud.Name = "btnPersonalDeSalud";
-            this.btnPersonalDeSalud.Size = new System.Drawing.Size(250, 70);
-            this.btnPersonalDeSalud.TabIndex = 2;
-            this.btnPersonalDeSalud.Text = "   Personal de Salud";
-            this.btnPersonalDeSalud.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonalDeSalud.UseVisualStyleBackColor = false;
-            this.btnPersonalDeSalud.Click += new System.EventHandler(this.btnPersonalDeSalud_Click);
+            this.btnAtencion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnAtencion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAtencion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnAtencion.FlatAppearance.BorderSize = 0;
+            this.btnAtencion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtencion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtencion.ForeColor = System.Drawing.Color.White;
+            this.btnAtencion.Location = new System.Drawing.Point(0, 280);
+            this.btnAtencion.Name = "btnAtencion";
+            this.btnAtencion.Size = new System.Drawing.Size(250, 70);
+            this.btnAtencion.TabIndex = 2;
+            this.btnAtencion.Text = "   Atencion";
+            this.btnAtencion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtencion.UseVisualStyleBackColor = false;
+            this.btnAtencion.Click += new System.EventHandler(this.btnAtencion_Click);
             // 
             // btnMedicamentos
             // 
@@ -148,28 +130,47 @@
             this.btnMedicamentos.UseVisualStyleBackColor = false;
             this.btnMedicamentos.Click += new System.EventHandler(this.btnMedicamentos_Click);
             // 
-            // btnAtencion
+            // btnPersonalDeSalud
             // 
-            this.btnAtencion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnAtencion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAtencion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnAtencion.FlatAppearance.BorderSize = 0;
-            this.btnAtencion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtencion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtencion.ForeColor = System.Drawing.Color.White;
-            this.btnAtencion.Location = new System.Drawing.Point(0, 280);
-            this.btnAtencion.Name = "btnAtencion";
-            this.btnAtencion.Size = new System.Drawing.Size(250, 70);
-            this.btnAtencion.TabIndex = 2;
-            this.btnAtencion.Text = "   Atencion";
-            this.btnAtencion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtencion.UseVisualStyleBackColor = false;
-            this.btnAtencion.Click += new System.EventHandler(this.btnAtencion_Click);
+            this.btnPersonalDeSalud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnPersonalDeSalud.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPersonalDeSalud.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnPersonalDeSalud.FlatAppearance.BorderSize = 0;
+            this.btnPersonalDeSalud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonalDeSalud.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonalDeSalud.ForeColor = System.Drawing.Color.White;
+            this.btnPersonalDeSalud.Location = new System.Drawing.Point(0, 140);
+            this.btnPersonalDeSalud.Name = "btnPersonalDeSalud";
+            this.btnPersonalDeSalud.Size = new System.Drawing.Size(250, 70);
+            this.btnPersonalDeSalud.TabIndex = 2;
+            this.btnPersonalDeSalud.Text = "   Personal de Salud";
+            this.btnPersonalDeSalud.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonalDeSalud.UseVisualStyleBackColor = false;
+            this.btnPersonalDeSalud.Click += new System.EventHandler(this.btnPersonalDeSalud_Click);
+            // 
+            // btnCitas
+            // 
+            this.btnCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnCitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCitas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnCitas.FlatAppearance.BorderSize = 0;
+            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCitas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCitas.ForeColor = System.Drawing.Color.White;
+            this.btnCitas.Location = new System.Drawing.Point(0, 70);
+            this.btnCitas.Name = "btnCitas";
+            this.btnCitas.Size = new System.Drawing.Size(250, 70);
+            this.btnCitas.TabIndex = 2;
+            this.btnCitas.Text = "   Citas";
+            this.btnCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCitas.UseVisualStyleBackColor = false;
+            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
             // panelContenido
             // 
-            this.panelContenido.BackColor = System.Drawing.Color.White;
+            this.panelContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenido.ForeColor = System.Drawing.Color.Black;
             this.panelContenido.Location = new System.Drawing.Point(250, 50);
             this.panelContenido.Name = "panelContenido";
             this.panelContenido.Size = new System.Drawing.Size(732, 553);

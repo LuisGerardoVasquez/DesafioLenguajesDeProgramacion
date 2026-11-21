@@ -62,7 +62,7 @@
             // 
             this.cmbCita_Paciente.Font = new System.Drawing.Font("Arial", 10F);
             this.cmbCita_Paciente.FormattingEnabled = true;
-            this.cmbCita_Paciente.Location = new System.Drawing.Point(175, 76);
+            this.cmbCita_Paciente.Location = new System.Drawing.Point(180, 76);
             this.cmbCita_Paciente.Name = "cmbCita_Paciente";
             this.cmbCita_Paciente.Size = new System.Drawing.Size(172, 27);
             this.cmbCita_Paciente.TabIndex = 10;
@@ -81,7 +81,7 @@
             // 
             this.cmbCita_Medico.Font = new System.Drawing.Font("Arial", 10F);
             this.cmbCita_Medico.FormattingEnabled = true;
-            this.cmbCita_Medico.Location = new System.Drawing.Point(175, 114);
+            this.cmbCita_Medico.Location = new System.Drawing.Point(180, 114);
             this.cmbCita_Medico.Name = "cmbCita_Medico";
             this.cmbCita_Medico.Size = new System.Drawing.Size(172, 27);
             this.cmbCita_Medico.TabIndex = 10;
@@ -100,7 +100,7 @@
             // 
             this.cmbCita_Tipo.Font = new System.Drawing.Font("Arial", 10F);
             this.cmbCita_Tipo.FormattingEnabled = true;
-            this.cmbCita_Tipo.Location = new System.Drawing.Point(175, 152);
+            this.cmbCita_Tipo.Location = new System.Drawing.Point(180, 152);
             this.cmbCita_Tipo.Name = "cmbCita_Tipo";
             this.cmbCita_Tipo.Size = new System.Drawing.Size(172, 27);
             this.cmbCita_Tipo.TabIndex = 10;
@@ -137,7 +137,7 @@
             // 
             this.txtCita_Motivo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCita_Motivo.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtCita_Motivo.Location = new System.Drawing.Point(175, 190);
+            this.txtCita_Motivo.Location = new System.Drawing.Point(180, 190);
             this.txtCita_Motivo.Name = "txtCita_Motivo";
             this.txtCita_Motivo.Size = new System.Drawing.Size(172, 27);
             this.txtCita_Motivo.TabIndex = 14;

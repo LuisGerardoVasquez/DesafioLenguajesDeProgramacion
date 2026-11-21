@@ -31,6 +31,8 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
             cmbPersonal_Especialidad.Items.AddRange(PersonalSalud.EspecialidadesValidas);
             cmbPersonal_Especialidad.SelectedIndex = -1;
         }
+
+        // METODOS
         private void ActualizarTabla()
         {
             dgvPersonal.Columns.Clear();
@@ -52,6 +54,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
             }
         }
 
+        // EVENTOS
         private void btnPersonal_Guardar_Click(object sender, EventArgs e)
         {
             try

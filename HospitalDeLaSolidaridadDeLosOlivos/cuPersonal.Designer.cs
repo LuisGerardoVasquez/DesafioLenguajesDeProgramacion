@@ -69,7 +69,7 @@
             // 
             this.txtPersonal_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPersonal_Nombre.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtPersonal_Nombre.Location = new System.Drawing.Point(175, 76);
+            this.txtPersonal_Nombre.Location = new System.Drawing.Point(180, 76);
             this.txtPersonal_Nombre.Name = "txtPersonal_Nombre";
             this.txtPersonal_Nombre.Size = new System.Drawing.Size(172, 27);
             this.txtPersonal_Nombre.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             this.txtPersonal_DNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPersonal_DNI.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtPersonal_DNI.Location = new System.Drawing.Point(175, 114);
+            this.txtPersonal_DNI.Location = new System.Drawing.Point(180, 114);
             this.txtPersonal_DNI.Name = "txtPersonal_DNI";
             this.txtPersonal_DNI.Size = new System.Drawing.Size(172, 27);
             this.txtPersonal_DNI.TabIndex = 4;
@@ -97,7 +97,7 @@
             // 
             this.txtPersonal_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPersonal_Telefono.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtPersonal_Telefono.Location = new System.Drawing.Point(175, 152);
+            this.txtPersonal_Telefono.Location = new System.Drawing.Point(180, 152);
             this.txtPersonal_Telefono.Name = "txtPersonal_Telefono";
             this.txtPersonal_Telefono.Size = new System.Drawing.Size(172, 27);
             this.txtPersonal_Telefono.TabIndex = 6;
@@ -116,7 +116,7 @@
             // 
             this.txtPersonal_CMP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPersonal_CMP.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtPersonal_CMP.Location = new System.Drawing.Point(175, 190);
+            this.txtPersonal_CMP.Location = new System.Drawing.Point(180, 190);
             this.txtPersonal_CMP.Name = "txtPersonal_CMP";
             this.txtPersonal_CMP.Size = new System.Drawing.Size(172, 27);
             this.txtPersonal_CMP.TabIndex = 8;

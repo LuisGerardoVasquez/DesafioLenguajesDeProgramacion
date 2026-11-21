@@ -56,7 +56,7 @@
             // 
             this.txtMedicamento_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMedicamento_Nombre.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtMedicamento_Nombre.Location = new System.Drawing.Point(175, 76);
+            this.txtMedicamento_Nombre.Location = new System.Drawing.Point(180, 76);
             this.txtMedicamento_Nombre.Name = "txtMedicamento_Nombre";
             this.txtMedicamento_Nombre.Size = new System.Drawing.Size(172, 27);
             this.txtMedicamento_Nombre.TabIndex = 4;
@@ -74,7 +74,7 @@
             // nudMedicamento_Cantidad
             // 
             this.nudMedicamento_Cantidad.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudMedicamento_Cantidad.Location = new System.Drawing.Point(175, 114);
+            this.nudMedicamento_Cantidad.Location = new System.Drawing.Point(180, 114);
             this.nudMedicamento_Cantidad.Name = "nudMedicamento_Cantidad";
             this.nudMedicamento_Cantidad.Size = new System.Drawing.Size(172, 27);
             this.nudMedicamento_Cantidad.TabIndex = 6;

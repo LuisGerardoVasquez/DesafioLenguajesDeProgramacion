@@ -35,6 +35,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
             dtpPaciente_Nacimiento.MaxDate = DateTime.Today;
         }
 
+        // METODOS
         private void ActualizarTabla()
         {
             dgvPacientes.Columns.Clear();
@@ -55,6 +56,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
                     p.FechaNacimiento.ToString("dd/MM/yyyy"), p.TipoSangre);
             }
         }
+        // EVENTOS
         private void btnPacientes_Guardar_Click(object sender, EventArgs e)
         {
             try

@@ -9,6 +9,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
     public class AtencionMedica
     {
         // ATRIBUTOS
+        private Dictionary<Medicamento, int> receta = new Dictionary<Medicamento, int>();
         private string idAtencion;
         private string diagnostico;
         private string tratamiento;
@@ -55,7 +56,65 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
         public DateTime FechaAtencion
         {
             get { return fechaAtencion; }
-            private set { fechaAtencion = value; }
+            private set
+            {
+                if (value > DateTime.Now)
+                {
+                    throw new ArgumentException("La fecha de la atención no puede ser futura.");
+                }
+                fechaAtencion = value;
+            }
+        }
+
+        // METODOS
+        public void RegistrarDiagnostico(string nuevoDiagnostico)
+        {
+            Diagnostico = nuevoDiagnostico;   // el setter valida que no esté vacío
+        }
+
+        public void GenerarReceta(Medicamento medicamento, int cantidad)
+        {
+            if (medicamento == null)
+            {
+                throw new ArgumentException("Seleccione un medicamento.");
+            }
+            if (cantidad <= 0)
+            {
+                throw new ArgumentException("La cantidad debe ser mayor que cero.");
+            }
+            if (!medicamento.VerificarDisponibilidad())
+            {
+                throw new ArgumentException("El medicamento " + medicamento.NombreComercial + " está agotado.");
+            }
+
+            medicamento.ActualizarStock(-cantidad);   // lanza error si el stock no alcanza
+
+            if (receta.ContainsKey(medicamento))
+            {
+                receta[medicamento] += cantidad;
+            }
+            else
+            {
+                receta.Add(medicamento, cantidad);
+            }
+        }
+
+        public string ResumenReceta()
+        {
+            if (receta.Count == 0)
+            {
+                return "Sin receta";
+            }
+            string resumen = "";
+            foreach (KeyValuePair<Medicamento, int> item in receta)
+            {
+                if (resumen != "")
+                {
+                    resumen += ", ";
+                }
+                resumen += item.Key.NombreComercial + " x" + item.Value;
+            }
+            return resumen;
         }
     }
 }

@@ -81,6 +81,20 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
                 CitaFactory.CrearCita("Telemedicina", "CT-0007", Pacientes[6], Personal[0], DateTime.Today.AddDays(4).AddHours(16), "Consulta general"),
                 CitaFactory.CrearCita("Presencial",   "CT-0008", Pacientes[7], Personal[2], DateTime.Today.AddDays(4).AddHours(8),  "Control de enfermería")
             };
+
+            // Datos iniciales
+            AtencionMedica at1 = new AtencionMedica("AT-0001", "Rinofaringitis aguda", "Reposo e hidratación", DateTime.Today.AddDays(-30));
+            at1.GenerarReceta(Medicamentos[0], 2);
+            Pacientes[0].AgregarAtencion(at1);
+
+            Pacientes[0].AgregarAtencion(new AtencionMedica("AT-0002", "Control de rutina", "Sin tratamiento", DateTime.Today.AddDays(-10)));
+
+            AtencionMedica at3 = new AtencionMedica("AT-0003", "Gastritis leve", "Dieta blanda", DateTime.Today.AddDays(-20));
+            at3.GenerarReceta(Medicamentos[4], 1);
+            Pacientes[1].AgregarAtencion(at3);
+
+            Pacientes[2].AgregarAtencion(new AtencionMedica("AT-0004", "Control prenatal", "Suplemento vitamínico", DateTime.Today.AddDays(-7)));
+            Pacientes[3].AgregarAtencion(new AtencionMedica("AT-0005", "Estrés laboral", "Seguimiento psicológico", DateTime.Today.AddDays(-15)));
         }
 
         // METODOS
