@@ -17,6 +17,7 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
         public List<Paciente> Pacientes { get; private set; }
         public List<PersonalSalud> Personal { get; private set; }
         public List<Medicamento> Medicamentos { get; private set; }
+        public List<CitaMedica> Citas { get; private set; }
 
         // CONSTRUCTOR
         private ConexionBDManager()
@@ -66,6 +67,19 @@ namespace HospitalDeLaSolidaridadDeLosOlivos
                 new Medicamento("MD-0008", "Salbutamol inhalador", 8),
                 new Medicamento("MD-0009", "Suero oral", 150),
                 new Medicamento("MD-0010", "Diclofenaco 50 mg", 0)
+            };
+
+            Citas = new List<CitaMedica>
+            {
+                //Datos iniciales
+                CitaFactory.CrearCita("Presencial",   "CT-0001", Pacientes[0], Personal[0], DateTime.Today.AddDays(1).AddHours(9),  "Control general"),
+                CitaFactory.CrearCita("Telemedicina", "CT-0002", Pacientes[1], Personal[7], DateTime.Today.AddDays(1).AddHours(10), "Consulta de seguimiento"),
+                CitaFactory.CrearCita("Presencial",   "CT-0003", Pacientes[2], Personal[3], DateTime.Today.AddDays(2).AddHours(11), "Control prenatal"),
+                CitaFactory.CrearCita("Telemedicina", "CT-0004", Pacientes[3], Personal[4], DateTime.Today.AddDays(2).AddHours(15), "Sesión de psicología"),
+                CitaFactory.CrearCita("Presencial",   "CT-0005", Pacientes[4], Personal[5], DateTime.Today.AddDays(3).AddHours(9),  "Evaluación nutricional"),
+                CitaFactory.CrearCita("Presencial",   "CT-0006", Pacientes[5], Personal[6], DateTime.Today.AddDays(3).AddHours(10), "Revisión podológica"),
+                CitaFactory.CrearCita("Telemedicina", "CT-0007", Pacientes[6], Personal[0], DateTime.Today.AddDays(4).AddHours(16), "Consulta general"),
+                CitaFactory.CrearCita("Presencial",   "CT-0008", Pacientes[7], Personal[2], DateTime.Today.AddDays(4).AddHours(8),  "Control de enfermería")
             };
         }
 

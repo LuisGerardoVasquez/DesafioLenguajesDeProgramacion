@@ -47,6 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AtencionMedica.cs" />
+    <Compile Include="CitaFactory.cs" />
+    <Compile Include="CitaMedica.cs" />
+    <Compile Include="CitaPresencial.cs" />
+    <Compile Include="CitaTelemedicina.cs" />
     <Compile Include="ConexionBDManager.cs" />
     <Compile Include="cuAtencion.cs">
       <SubType>UserControl</SubType>
